@@ -1,6 +1,6 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as React from 'react';
@@ -23,7 +23,7 @@ const Drawer = createDrawerNavigator();
 
 function RootNavigator() {
     return (
-        <Drawer.Navigator drawerType='slide'>
+        <Drawer.Navigator screenOptions={{ drawerType: 'slide' }}>
             <Drawer.Screen name='ModalStack' component={StackNavigator} options={{ headerShown: false }} />
         </Drawer.Navigator>
     );

@@ -14,4 +14,5 @@
     "experimentalDecorators": true,
     "allowUmdGlobalAccess": false
   },
+  "extends": "expo/tsconfig.base"
 }
